@@ -1,0 +1,55 @@
+{
+	"name": "serrodcal-java",
+
+	"image": "ubuntu:22.04",
+
+    // Java and Maven uses SDKMan! under the hood, set a valid version from SDKMan!
+
+	"features": {
+        "java": "lts",
+		"maven": "latest",
+        "docker-in-docker": {
+            "version": "latest",
+            "moby": true,
+            "dockerDashComposeVersion": "v2"
+        }
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+				"java.configuration.updateBuildConfiguration": "automatic",
+				"terminal.integrated.fontFamily": "monospace"
+			},
+			"extensions": [
+				"ms-ceintl.vscode-language-pack-es",
+				"streetsidesoftware.code-spell-checker",
+				"visualstudioexptteam.vscodeintellicode",
+				"visualstudioexptteam.intellicode-api-usage-examples",
+				"redhat.java",
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-java-debug",
+				"vscjava.vscode-java-test",
+				"vscjava.vscode-java-dependency",
+				"vscjava.vscode-maven",
+				"ms-azuretools.vscode-docker",
+				"redhat.vscode-xml",
+				"redhat.vscode-yaml",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"MS-CEINTL.vscode-language-pack-es"
+			]
+		}
+	}
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "java -version",
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
